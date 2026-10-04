@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header({ storeName, cartCount }) {
@@ -7,15 +8,15 @@ function Header({ storeName, cartCount }) {
         <h1 className="store-name">{storeName}</h1>
 
         <nav className="navigation">
-          <a href="#home">Home</a>
-          <a href="#products">Products</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/#about">About</Link>
+          <Link to="/#contact">Contact</Link>
 
-          <a href="#cart" className="cart-container">
+          <Link to="/cart" className="cart-container">
             <span className="cart-icon">🛒</span>
             <span className="cart-count">{cartCount}</span>
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
